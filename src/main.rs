@@ -56,6 +56,11 @@ impl Widget for &App {
                 "Value: ".into(),
                 self.counter.to_string().yellow(),
         ])]);
+
+        Paragraph::new(counter_text)
+            .centered()
+            .block(block)
+            .render(area, buf);
     }
 }
 
